@@ -16,17 +16,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add search icon to the filter field **[@elliotfontaine]**
 - Add a column context menu on header right-click **[@elliotfontaine in [#164](https://github.com/elliotfontaine/yard-godot/pull/164)]**
-- Add update channel picker synced with project setting **[@elliotfontaine]**
+- Add update channel picker (stable/pre-release) synced with project setting **[@elliotfontaine]**
 - Allow checking for and installing plugin updates from the editor **[@elliotfontaine in [#154](https://github.com/elliotfontaine/yard-godot/pull/154)]**
 - Allow browsing sub-resource properties as a table **[@elliotfontaine in [#151](https://github.com/elliotfontaine/yard-godot/pull/151)]**
-- Backport to Godot 4.4.1 **[@elliotfontaine in [#143](https://github.com/elliotfontaine/yard-godot/pull/143)]**
-- Support Godot 4.8dev4 **[@francoisdlt in [#123](https://github.com/elliotfontaine/yard-godot/pull/123)]**
+- Support Godot 4.4 **[@elliotfontaine in [#143](https://github.com/elliotfontaine/yard-godot/pull/143)]**
+- Support Godot 4.8 (dev snapshots) **[@francoisdlt in [#123](https://github.com/elliotfontaine/yard-godot/pull/123)]**
 - Make editor shortcuts configurable **[@elliotfontaine in [#127](https://github.com/elliotfontaine/yard-godot/pull/127)]**
 - Add a multiline text editor to the table for `@export_multiline` properties **[@elliotfontaine in [#121](https://github.com/elliotfontaine/yard-godot/pull/121)]**
 - Support `Registry.PROPERTY_HINT_CUSTOM` columns with a dropdown editor **[@elliotfontaine in [#120](https://github.com/elliotfontaine/yard-godot/pull/120)]**
-- Add a bitflags editor to the table **[@elliotfontaine in [#119](https://github.com/elliotfontaine/yard-godot/pull/119)]**
+- Add a bitflags editor for `@export_flags` properties **[@elliotfontaine in [#119](https://github.com/elliotfontaine/yard-godot/pull/119)]**
 - Add a StringName editor to the table **[@elliotfontaine in [#116](https://github.com/elliotfontaine/yard-godot/pull/116)]**
 - Add rich tooltips for color, resource, dict and array cells **[@elliotfontaine in [#109](https://github.com/elliotfontaine/yard-godot/pull/109)]**
 - Allow hiding the UID and String ID columns **[@elliotfontaine in [#102](https://github.com/elliotfontaine/yard-godot/pull/102)]**
@@ -37,14 +36,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Discard filter edits when pressing Escape **[@elliotfontaine]**
-- Sort columns only via a header sort icon **[@elliotfontaine in [#168](https://github.com/elliotfontaine/yard-godot/pull/168)]**
+- Clicking a column header no longer sorts; use the header sort icon instead **[@elliotfontaine in [#168](https://github.com/elliotfontaine/yard-godot/pull/168)]**
 - Hold Shift to scroll the registry table horizontally **[@ttencate in [#166](https://github.com/elliotfontaine/yard-godot/pull/166)]**
 - Make toolbar less cluttered **[@elliotfontaine]**
 - Convert pasted cell values to the target column's type **[@elliotfontaine in [#161](https://github.com/elliotfontaine/yard-godot/pull/161)]**
-- Add directory picker to Add Entry footer **[@elliotfontaine in [#145](https://github.com/elliotfontaine/yard-godot/pull/145)]**
-- Remember Add Entry field per registry **[@elliotfontaine in [#144](https://github.com/elliotfontaine/yard-godot/pull/144)]**
+- Save entries to a folder picked in the Add Entry footer, no longer the FileSystem dock selection **[@elliotfontaine in [#145](https://github.com/elliotfontaine/yard-godot/pull/145)]**
+- Remember Add Entry fields per registry **[@elliotfontaine in [#144](https://github.com/elliotfontaine/yard-godot/pull/144)]**
 - Scan and index registries before run/export instead of on every filesystem change **[@elliotfontaine in [#141](https://github.com/elliotfontaine/yard-godot/pull/141)]**
-- **UX:** Revert to using checkable items at the menu root for disabling columns **[@elliotfontaine in [#112](https://github.com/elliotfontaine/yard-godot/pull/112)]**
+- Improve cell text ellipsis performance **[@elliotfontaine in [#114](https://github.com/elliotfontaine/yard-godot/pull/114)]**
 
 ### Fixed
 
@@ -52,16 +51,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Stop overriding the UID of newly created registries **[@elliotfontaine in [#174](https://github.com/elliotfontaine/yard-godot/pull/174)]**
 - Stop range cells from changing value on double-click **[@elliotfontaine in [#170](https://github.com/elliotfontaine/yard-godot/pull/170)]**
 - Open cell popup menus under the cell instead of at the mouse **[@elliotfontaine in [#169](https://github.com/elliotfontaine/yard-godot/pull/169)]**
-- Prevent hiding registry editor on Godot 4.8+ **[@ttencate in [#163](https://github.com/elliotfontaine/yard-godot/pull/163)]**
-- Stop dropping columns hidden by `Object._validate_property` on some resources **[@elliotfontaine in [#156](https://github.com/elliotfontaine/yard-godot/pull/156)]**
+- Fix registry editor disappearing on Godot 4.8+ **[@ttencate in [#163](https://github.com/elliotfontaine/yard-godot/pull/163)]**
+- Show columns that `Object._validate_property` hides only on some resources **[@elliotfontaine in [#156](https://github.com/elliotfontaine/yard-godot/pull/156)]**
 - Allow export groups with a name prefix in registry resources **[@elliotfontaine in [#153](https://github.com/elliotfontaine/yard-godot/pull/153)]**
 - Reduce progress bar contrast when using the modern editor theme **[@elliotfontaine]**
 - Keep class restriction working after script file moves **[@elliotfontaine in [#138](https://github.com/elliotfontaine/yard-godot/pull/138)]**
 - Repair RegistryLoadTracker and add example scene to test it **[@elliotfontaine in [#137](https://github.com/elliotfontaine/yard-godot/pull/137)]**
 - Strip leading/trailing whitespace from new entry string IDs **[@elliotfontaine in [#118](https://github.com/elliotfontaine/yard-godot/pull/118)]**
 - Stop row filtering from throwing an error **[@elliotfontaine in [#117](https://github.com/elliotfontaine/yard-godot/pull/117)]**
-- Prevent error when selecting a color in the color editor **[@elliotfontaine in [#115](https://github.com/elliotfontaine/yard-godot/pull/115)]**
-- Improve cell text ellipsis performance **[@elliotfontaine in [#114](https://github.com/elliotfontaine/yard-godot/pull/114)]**
 - Keep table filter state after editing a property **[@elliotfontaine in [#98](https://github.com/elliotfontaine/yard-godot/pull/98)]**
 
 ### New Contributors
@@ -95,7 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Create resource files inline from Add Entry **[@elliotfontaine in [#66](https://github.com/elliotfontaine/yard-godot/pull/66)]**
 - Improve property column ordering and add parent-first display option **[@elliotfontaine in [#53](https://github.com/elliotfontaine/yard-godot/pull/53)]**
 - Show enum labels in collection cells **[@elliotfontaine in [#45](https://github.com/elliotfontaine/yard-godot/pull/45)]**
-- **tweak:** Move Rescan button before the Reindex button in topbar **[@elliotfontaine]**
+- Move Rescan button before the Reindex button in topbar **[@elliotfontaine]**
 - Right-align numeric cells (int, float) **[@elliotfontaine]**
 - Display resource filename in resource and collection cells **[@elliotfontaine in [#41](https://github.com/elliotfontaine/yard-godot/pull/41)]**
 - Clarify unsaved resource error log with remediation steps **[@elliotfontaine in [#35](https://github.com/elliotfontaine/yard-godot/pull/35)]**
