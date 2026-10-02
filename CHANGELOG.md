@@ -12,10 +12,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/2.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.3.0] - 2026-10-02
 
 ### Added
 
+- Add search icon to the filter field **[@elliotfontaine]**
+- Add a column context menu on header right-click **[@elliotfontaine in [#164](https://github.com/elliotfontaine/yard-godot/pull/164)]**
+- Add update channel picker synced with project setting **[@elliotfontaine]**
 - Allow checking for and installing plugin updates from the editor **[@elliotfontaine in [#154](https://github.com/elliotfontaine/yard-godot/pull/154)]**
 - Allow browsing sub-resource properties as a table **[@elliotfontaine in [#151](https://github.com/elliotfontaine/yard-godot/pull/151)]**
 - Backport to Godot 4.4.1 **[@elliotfontaine in [#143](https://github.com/elliotfontaine/yard-godot/pull/143)]**
@@ -33,17 +36,29 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Reduce progress bar contrast when using the modern editor theme **[@elliotfontaine]**
+- Discard filter edits when pressing Escape **[@elliotfontaine]**
+- Sort columns only via a header sort icon **[@elliotfontaine in [#168](https://github.com/elliotfontaine/yard-godot/pull/168)]**
+- Hold Shift to scroll the registry table horizontally **[@ttencate in [#166](https://github.com/elliotfontaine/yard-godot/pull/166)]**
+- Make toolbar less cluttered **[@elliotfontaine]**
+- Convert pasted cell values to the target column's type **[@elliotfontaine in [#161](https://github.com/elliotfontaine/yard-godot/pull/161)]**
 - Add directory picker to Add Entry footer **[@elliotfontaine in [#145](https://github.com/elliotfontaine/yard-godot/pull/145)]**
 - Remember Add Entry field per registry **[@elliotfontaine in [#144](https://github.com/elliotfontaine/yard-godot/pull/144)]**
 - Scan and index registries before run/export instead of on every filesystem change **[@elliotfontaine in [#141](https://github.com/elliotfontaine/yard-godot/pull/141)]**
-- Strip leading/trailing whitespace from new entry string IDs **[@elliotfontaine in [#118](https://github.com/elliotfontaine/yard-godot/pull/118)]**
+- **UX:** Revert to using checkable items at the menu root for disabling columns **[@elliotfontaine in [#112](https://github.com/elliotfontaine/yard-godot/pull/112)]**
 
 ### Fixed
 
+- Stop forcing an ellipsis on text cells in Godot 4.5 **[@elliotfontaine in [#176](https://github.com/elliotfontaine/yard-godot/pull/176)]**
+- Stop overriding the UID of newly created registries **[@elliotfontaine in [#174](https://github.com/elliotfontaine/yard-godot/pull/174)]**
+- Stop range cells from changing value on double-click **[@elliotfontaine in [#170](https://github.com/elliotfontaine/yard-godot/pull/170)]**
+- Open cell popup menus under the cell instead of at the mouse **[@elliotfontaine in [#169](https://github.com/elliotfontaine/yard-godot/pull/169)]**
+- Prevent hiding registry editor on Godot 4.8+ **[@ttencate in [#163](https://github.com/elliotfontaine/yard-godot/pull/163)]**
+- Stop dropping columns hidden by `Object._validate_property` on some resources **[@elliotfontaine in [#156](https://github.com/elliotfontaine/yard-godot/pull/156)]**
 - Allow export groups with a name prefix in registry resources **[@elliotfontaine in [#153](https://github.com/elliotfontaine/yard-godot/pull/153)]**
+- Reduce progress bar contrast when using the modern editor theme **[@elliotfontaine]**
 - Keep class restriction working after script file moves **[@elliotfontaine in [#138](https://github.com/elliotfontaine/yard-godot/pull/138)]**
 - Repair RegistryLoadTracker and add example scene to test it **[@elliotfontaine in [#137](https://github.com/elliotfontaine/yard-godot/pull/137)]**
+- Strip leading/trailing whitespace from new entry string IDs **[@elliotfontaine in [#118](https://github.com/elliotfontaine/yard-godot/pull/118)]**
 - Stop row filtering from throwing an error **[@elliotfontaine in [#117](https://github.com/elliotfontaine/yard-godot/pull/117)]**
 - Prevent error when selecting a color in the color editor **[@elliotfontaine in [#115](https://github.com/elliotfontaine/yard-godot/pull/115)]**
 - Improve cell text ellipsis performance **[@elliotfontaine in [#114](https://github.com/elliotfontaine/yard-godot/pull/114)]**
@@ -51,6 +66,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### New Contributors
 
+- @ttencate made their first contribution in [#166](https://github.com/elliotfontaine/yard-godot/pull/166)
 - @francoisdlt made their first contribution in [#123](https://github.com/elliotfontaine/yard-godot/pull/123)
 - @Guihurt made their first contribution in [#134](https://github.com/elliotfontaine/yard-godot/pull/134)
 
