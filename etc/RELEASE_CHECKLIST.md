@@ -27,8 +27,8 @@ SPDX-License-Identifier: CC0-1.0
 ## Version bump
 
 - [ ] CI is green on the commit to be tagged
-- [ ] `version` in `plugin.cfg` is bumped
 - [ ] `CHANGELOG.md` is updated, with breaking changes clearly marked
+- [ ] `version` in `plugin.cfg` is bumped
 
 > [!IMPORTANT]
 > For patch releases, do the bump on `release/X.Y`, not on `main`.
