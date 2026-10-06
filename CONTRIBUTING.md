@@ -108,9 +108,24 @@ You can run the check locally with `reuse lint`. You'll have to install the [reu
 
 - Keep commits focused on a single concern.
 - Do not commit theme-related changes. These can sneak in when saving UI scenes such as `registry_table_view.tscn` or `registry_editor.tscn`, which run inside the editor.
-- Write commit messages following [Conventional Commits](https://www.conventionalcommits.org/).
-- The same goes for the **PR title**, which matters most: pull requests are squash-merged, so the title becomes the commit on `main` and, through [git-cliff](https://git-cliff.org/), the changelog entry. Example: `fix: use lexicographic comparison for Godot version check`.
-- Do not edit [CHANGELOG.md](CHANGELOG.md). It is generated from the commit history then manually curated by maintainers.
 - Do not add **Co-Authored-By** trailers for coding agents (Claude Code, Copilot, etc.). Commits must be authored by the human contributor only.
 - Add your name to [AUTHORS.md](AUTHORS.md) (alphabetical list).
+- Do not edit [CHANGELOG.md](CHANGELOG.md). It is generated from the commit history using git-cliff then manually curated by maintainers.
+- Write commit messages and PR titles following [Conventional Commits](https://www.conventionalcommits.org/), using one of the [scopes below](#commit-scopes) when the change fits a single area. Example: `fix(lib): use lexicographic comparison for Godot version check`.
 - Open a pull request against `main`. Describe what changed and why, and link any related issue.
+- In a pull request, individual commit messages matter less: pull requests are squash-merged, and a maintainer writes the final commit message following these conventions.
+
+### Commit scopes
+
+| Scope     | Area                                                                            |
+| --------- | ------------------------------------------------------------------------------- |
+| `api`     | Runtime API (`registry.gd`)                                                     |
+| `dotnet`  | C# wrapper (`Registry.cs`)                                                      |
+| `model`   | Editor-side registry logic: RegistryIO, scanning, property index                |
+| `table`   | DynamicTable and its cells                                                      |
+| `lib`     | Other self-contained components under `classes/` (MarkdownLabel, ClassUtils...) |
+| `updater` | Update manager and update window                                                |
+| `i18n`    | Making text translatable: `tr()` calls, `plugin.pot` entries                    |
+| `l10n`    | Translations in the `.po` files                                                 |
+| `example` | Demo project (`example/`)                                                       |
+| `gui`     | Rest of the editor: main screen, dialogs, shortcuts, `plugin.gd`                |
