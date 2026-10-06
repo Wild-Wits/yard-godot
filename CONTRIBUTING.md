@@ -122,7 +122,7 @@ You can run the check locally with `reuse lint`. You'll have to install the [reu
 | `api`     | Runtime API (`registry.gd`)                                                     |
 | `dotnet`  | C# wrapper (`Registry.cs`)                                                      |
 | `model`   | Editor-side registry logic: RegistryIO, scanning, property index                |
-| `table`   | DynamicTable and its cells                                                      |
+| `table`   | DataTable and its cells                                                         |
 | `lib`     | Other self-contained components under `classes/` (MarkdownLabel, ClassUtils...) |
 | `updater` | Update manager and update window                                                |
 | `i18n`    | Making text translatable: `tr()` calls, `plugin.pot` entries                    |
