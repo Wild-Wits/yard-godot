@@ -89,13 +89,24 @@ enum BodyColor {
 @export var evolutions: Array[GdmEvolution]
 @export var flags: Array[StringName]
 
-@export_group("Base Stats")
+@export_group("Base Stats", "base_")
 @export_range(0, 255, 1) var base_hp: int = 1
 @export_range(0, 255, 1) var base_attack: int = 1
 @export_range(0, 255, 1) var base_defense: int = 1
 @export_range(0, 255, 1) var base_sp_attack: int = 1
 @export_range(0, 255, 1) var base_sp_defense: int = 1
 @export_range(0, 255, 1) var base_speed: int = 1
+@export_custom(
+	PROPERTY_HINT_RANGE,
+	"0,800,hide_control",
+	PROPERTY_USAGE_READ_ONLY | PROPERTY_USAGE_EDITOR,
+) var base_stats_total: int:
+	get:
+		return (
+			base_hp + base_attack + base_defense + base_sp_attack + base_sp_defense + base_speed
+		)
+	set(value):
+		return
 
 @export_group("Experience")
 @export var growth_rate: GrowthRate = GrowthRate.MEDIUM_FAST
